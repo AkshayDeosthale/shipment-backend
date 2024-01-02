@@ -45,32 +45,10 @@ export class DeliveryPartner {
   };
 
   @Prop({
-    type: [
-      {
-        vehicleType: { type: String, required: true },
-        modelName: { type: String, required: true },
-        vehicleNumber: { type: String, required: true },
-        condition: { type: String, required: true },
-        year_of_purchase: { type: String, required: true },
-        RC_number: { type: String, required: true },
-        is_insured: { type: Boolean, required: true },
-        on_rent: { type: Boolean, required: true },
-        rent_details: { type: String, required: true },
-      },
-    ],
+    type: [String],
     required: false,
   })
-  vehicleDetails: {
-    vehicleType: string;
-    modelName: string;
-    vehicleNumber: string;
-    condition: string;
-    year_of_purchase: string;
-    RC_number: string;
-    is_insured: boolean;
-    on_rent: boolean;
-    rent_details: string;
-  }[];
+  vehicleDetails: string[];
 }
 
 export type DeliveryPartnerDocument = DeliveryPartner & Document;

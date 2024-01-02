@@ -5,8 +5,6 @@ import { Delivery } from 'src/schemas/delivery.schema';
 import { CreateDeliveryOrderDto } from './dto/create-delivery-order.dto';
 import { UpdateDeliveryOrderDto } from './dto/update-delivery-order.dto';
 
-import axios from 'axios';
-
 @Injectable()
 export class DeliveryOrdersService {
   constructor(
@@ -84,6 +82,14 @@ export class DeliveryOrdersService {
 
   findAll() {
     return this.DELIVERY.find({});
+  }
+
+  activateTrip() {
+    return { maessage: 'Activate' };
+  }
+
+  cancelTrip() {
+    return { maessage: 'Cancel' };
   }
 
   findOne(id: string) {

@@ -15,6 +15,16 @@ import { UpdateDeliveryOrderDto } from './dto/update-delivery-order.dto';
 export class DeliveryOrdersController {
   constructor(private readonly deliveryOrdersService: DeliveryOrdersService) {}
 
+  @Post('activateTrip')
+  activateTrip(@Body() createDeliveryOrderDto: any) {
+    return this.deliveryOrdersService.activateTrip();
+  }
+
+  @Post('cancelTrip')
+  cancelTrip(@Body() createDeliveryOrderDto: any) {
+    return this.deliveryOrdersService.cancelTrip();
+  }
+
   @Post()
   create(@Body() createDeliveryOrderDto: CreateDeliveryOrderDto) {
     return this.deliveryOrdersService.create(createDeliveryOrderDto);

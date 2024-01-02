@@ -7,6 +7,7 @@ import { DeliveryPartnersModule } from './delivery-partners/delivery-partners.mo
 import { MongooseModule } from '@nestjs/mongoose';
 import { DeliveryOrdersModule } from './delivery-orders/delivery-orders.module';
 import { ConfigModule } from '@nestjs/config';
+import { VehiclesModule } from './vehicles/vehicles.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ConfigModule } from '@nestjs/config';
     DeliveryPartnersModule,
     DeliveryOrdersModule,
     ConfigModule.forRoot({ isGlobal: true }),
+    VehiclesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

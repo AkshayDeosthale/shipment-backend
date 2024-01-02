@@ -30,23 +30,23 @@ export class Delivery {
   @Prop({ required: true, type: String })
   end_location: string;
 
-  //  not in create
-  @Prop({ required: false, type: Number })
-  deliveryCost: number;
-
   @Prop({ required: true, type: String })
   vehicleType: string;
 
   @Prop({ required: true, type: String })
   goods_type: string;
 
-  @Prop({ required: true, type: String })
-  goods_quantity: string;
+  @Prop({ required: true, type: Number })
+  goods_quantity: number;
 
   @Prop({ required: true, type: String })
   goods_dimention: string;
 
   //not in create
+
+  @Prop({ required: false, type: Number })
+  deliveryCost: number;
+
   @Prop({ required: false, type: Number })
   distance: number;
 }

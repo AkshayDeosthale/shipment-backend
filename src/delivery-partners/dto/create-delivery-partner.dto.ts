@@ -1,4 +1,5 @@
 import {
+  IsArray,
   IsBoolean,
   IsEnum,
   IsNotEmpty,
@@ -94,8 +95,9 @@ export class CreateDeliveryPartnerDto {
   readonly location: LocationDTO;
 
   @ValidateNested()
+  @IsArray()
   //   @Type(() => VehiclenDTO)
-  readonly vehicleDetails: VehiclenDTO;
+  readonly vehicleDetails: VehiclenDTO[];
 
   @ValidateNested()
   //   @Type(() => SosDTO)
