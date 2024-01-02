@@ -8,6 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { DeliveryOrdersModule } from './delivery-orders/delivery-orders.module';
 import { ConfigModule } from '@nestjs/config';
 import { VehiclesModule } from './vehicles/vehicles.module';
+import { VehicleLocationModule } from './vehicle-location/vehicle-location.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { VehiclesModule } from './vehicles/vehicles.module';
     DeliveryOrdersModule,
     ConfigModule.forRoot({ isGlobal: true }),
     VehiclesModule,
+    VehicleLocationModule,
   ],
   controllers: [AppController],
   providers: [AppService],

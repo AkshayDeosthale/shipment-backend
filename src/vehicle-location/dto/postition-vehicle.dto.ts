@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsString } from 'class-validator';
 
 export class VehiclePosition {
   @IsNotEmpty()
@@ -8,4 +8,8 @@ export class VehiclePosition {
   @IsNotEmpty()
   @IsString()
   longitude: string;
+
+  @IsNotEmpty()
+  @IsBoolean()
+  isTripCompleted: boolean;
 }
