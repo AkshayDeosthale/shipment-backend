@@ -12,7 +12,6 @@ import { VehicleLocationModule } from './vehicle-location/vehicle-location.modul
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017/mini-Porter'),
     UsersModule,
     EnterpriseModule,
     DeliveryPartnersModule,
@@ -20,6 +19,7 @@ import { VehicleLocationModule } from './vehicle-location/vehicle-location.modul
     ConfigModule.forRoot({ isGlobal: true }),
     VehiclesModule,
     VehicleLocationModule,
+    MongooseModule.forRoot(process.env.MONGO_URI),
   ],
   controllers: [AppController],
   providers: [AppService],
